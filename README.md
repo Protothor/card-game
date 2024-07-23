@@ -1,0 +1,3 @@
+# What is this?
+
+This is the deckbuilding web app I made for my card game in development. Poke around if you want, but this is probably not for you. I will be using this repo to host a specific github page website for the time being so my friends and I can work on things in "real" space before programming the digital version of this card game. I will be ignoring any "issues" or pull requests, because that's not the point of this. Thank you.

@@ -1,0 +1,1 @@
+export const rep = (a) => a.replaceAll(".png", "")

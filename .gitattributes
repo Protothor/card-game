@@ -1,0 +1,2 @@
+*.png filter=lfs diff=lfs merge=lfs -text
+src/Card/Art/*.png filter=lfs diff=lfs merge=lfs -text
