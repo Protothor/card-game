@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { readString } from 'react-papaparse'
-import cardListIn from "convert/Card List.csv"
+import cardListIn from "./Card List.csv"
 import { CheckPicker, Button, ButtonToolbar, ButtonGroup, Input } from 'rsuite'
-import Axios from 'axios'
 import Card from './Card'
 import Art from './Card/Art'
 import {rep} from './Card/util'
@@ -59,10 +58,10 @@ function App() {
   const [deckNames, setDeckNames] = useState(window.localStorage.getItem("DeckNames") || "")
 
   useEffect (() => {
-    Axios(cardListIn).then(res => {
-      const d = readString(res.data, { header: true, encoding: "utf-8", error: (e) => console.log(e) }).data
+    fetch(cardListIn).then(res => res.text()).then(res => {
+      const d = readString(res, { header: true, encoding: "utf-8", error: (e) => console.log(e) }).data
       d.pop()
-      const cardList = d.map((data, i) => ({...data, id: i, Art: `One_${(i + 1).toString().padStart(3, '0')}`}))
+      const cardList = d.map((data, i) => ({...data, id: i, Art: `Defaultcopy_${(i + 1).toString().padStart(3, '0')}`}))
       setAllCards(cardList)
       setAllCollections({
         archetypes: makeCollection(d, "Archetype"),
@@ -74,64 +73,61 @@ function App() {
     })
   }, [])
 
-  const keydowncmd = ({ctrlKey, shiftKey, key}) => {
-    
-    if (ctrlKey) {
-      if (key === "ArrowUp") {
-        if (editor === "Deck") {
-          setEditor("CardsDeck")
-        } else if (editor === "CardsDeck") {
-          setEditor("Cards")
-        }
-      } else if (key === "ArrowDown") {
-        if (editor === "Cards") {
-          setEditor("CardsDeck")
-        } else if (editor === "CardsDeck") {
-          setEditor("Deck")
-        }
-      } else if (key === "Z" || key === "z") {
-        if (shiftKey) {
-          redo()
-        } else {
-          undo()
-        }
-      } else if (key === "Y" || key === "y") {
-        redo()
-      }
-    } else {
-      try {
-        const useDeck = editor === "Deck" ? flat(splitDeck) : flat(splitCards)
-        console.log(useDeck.map(({Name}) => Name))
-        if (key === "ArrowLeft") {
-          const cardIndex = useDeck.toReversed().findIndex(card => card.id === selectedCard.id)
-          if (cardIndex === -1) {
-            const card = useDeck.toReversed().find(card => card.id < selectedCard.id)
-            if (card) {
-              setSelectedCard({...allCards[card.id]})
-            }
-          } else if (cardIndex !== 0) {
-            setSelectedCard({...allCards[useDeck.toReversed()[cardIndex - 1].id]})
-          }
-        } else if (key === "ArrowRight") {
-          const cardIndex = useDeck.findIndex(card => card.id === selectedCard.id)
-          if (cardIndex === -1) {
-            const card = useDeck.find(card => card.id > selectedCard.id)
-            if (card) {
-              setSelectedCard({...allCards[card.id]})
-            }
-          } else if (cardIndex !== (useDeck.length - 1)) {
-            setSelectedCard({...allCards[useDeck[cardIndex + 1].id]})
-          }
-        } else if (key === "ArrowUp") {
-          addToDeck(selectedCard)
-        } else if (key === "ArrowDown") {
-          removeFromDeck(selectedCard)
-        }
-      } catch {}
-    }
-  }
-
   useEffect(() => {
+    const keydowncmd = ({ctrlKey, shiftKey, key}) => {
+      if (ctrlKey) {
+        if (key === "ArrowUp") {
+          if (editor === "Deck") {
+            setEditor("CardsDeck")
+          } else if (editor === "CardsDeck") {
+            setEditor("Cards")
+          }
+        } else if (key === "ArrowDown") {
+          if (editor === "Cards") {
+            setEditor("CardsDeck")
+          } else if (editor === "CardsDeck") {
+            setEditor("Deck")
+          }
+        } else if (key === "Z" || key === "z") {
+          if (shiftKey) {
+            redo()
+          } else {
+            undo()
+          }
+        } else if (key === "Y" || key === "y") {
+          redo()
+        }
+      } else {
+        try {
+          const useDeck = editor === "Deck" ? flat(splitDeck) : flat(splitCards)
+          if (key === "ArrowLeft") {
+            const cardIndex = useDeck.toReversed().findIndex(card => card.id === selectedCard.id)
+            if (cardIndex === -1) {
+              const card = useDeck.toReversed().find(card => card.id < selectedCard.id)
+              if (card) {
+                setSelectedCard({...allCards[card.id]})
+              }
+            } else if (cardIndex !== 0) {
+              setSelectedCard({...allCards[useDeck.toReversed()[cardIndex - 1].id]})
+            }
+          } else if (key === "ArrowRight") {
+            const cardIndex = useDeck.findIndex(card => card.id === selectedCard.id)
+            if (cardIndex === -1) {
+              const card = useDeck.find(card => card.id > selectedCard.id)
+              if (card) {
+                setSelectedCard({...allCards[card.id]})
+              }
+            } else if (cardIndex !== (useDeck.length - 1)) {
+              setSelectedCard({...allCards[useDeck[cardIndex + 1].id]})
+            }
+          } else if (key === "ArrowUp") {
+            addToDeck(selectedCard)
+          } else if (key === "ArrowDown") {
+            removeFromDeck(selectedCard)
+          }
+        } catch {}
+      }
+    }
     document.addEventListener("keydown", keydowncmd, false);
     
     return () => {
@@ -315,7 +311,7 @@ function App() {
       </div>
       {selectedCard.Art &&
         <div className='flex center'>
-          <img src={Art[rep(selectedCard.Art)]} style={{ position: 'sticky', top: '0px', height: '100%', aspectRatio: '2.5/3.5'}}/>
+          <img alt={selectedCard.Name} src={Art[rep(selectedCard.Art)]} style={{ position: 'sticky', top: '0px', height: '100%', aspectRatio: '2.5/3.5'}}/>
           <ButtonToolbar style={{ position: 'fixed', bottom: '0'}}>
             <ButtonGroup>
               <Button onClick={() => removeFromDeck(selectedCard)}><span className="bigger">-</span></Button>

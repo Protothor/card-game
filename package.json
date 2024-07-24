@@ -1,14 +1,9 @@
 {
-  "name": "deck-maker-web-app",
+  "name": "deck-builder",
   "version": "0.1.0",
+  "homepage": "https://protothor.github.io/deckbuilder",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.2",
-    "Buffer": "^0.0.0",
-    "convert": "file:../../Materials",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-papaparse": "^4.4.0",
@@ -17,11 +12,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "set PORT=30000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "node ./postinstall.js"
+    "write": "node ./write.js"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +37,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.1.1"
   }
 }

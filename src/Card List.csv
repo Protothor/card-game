@@ -1,0 +1,163 @@
+﻿Art,Name,Card Type,Unique,Archetype,Type,CRC,Cost,Move,ATK,DEF,HP,Keywords,Effect,
+Tyler,Creepy Crawlies,Unit,,Alien,Bugs,1,1,1,1,0,2,,,
+Tyler,A Swarm,Unit,,Alien,Bugs,1,L,2,1,0,1,,,
+Tyler,Striders,Unit,,Alien,Horror,1,N,1,1,0,1,,"As a surprise, {Q}, sacrifice this, target a card with CRC ≤ 2 + ?, negate target or cancel deployment",
+Colin,Kill Bots,Unit,,Alien,Bots,1,S,1,1,0,1,{Kill} 1,,
+Tyler,Hungering Masses,Unit,,Alien,Bugs,2,2,2,1,1,2,,"{1}, sacrifice this, do 4 {Damage} among Units in {Range 0}",
+Colin,Horrors Beyond,Unit,,Alien,Horror,2,1S,1,1,1,1,{Range} 1,"{2}, exhaust this, destroy Unit in {Range 0}",
+Colin,Death Squad,Unit,,Alien,Bots,2,1S,1,1,2,1,{Kill} 1,"{2}, ignore 1 {Damage} to this",
+Tyler,Mantis Destroyers,Unit,,Alien,Bugs,3,1LN,3,1,1,2,{Deploy} 1,"On Deploy: Target one Unit, if this is destroyed, destroy target ",
+Tyler,The Far Guards,Unit,,Alien,Bugs,3,1LS,3,1,0,3,{Ride} Alien 2,On {Ride}: If {Rider} does not have a far counter it gains 1 {ATK} counter and a far counter,
+Colin,Horrors Below,Unit,,Alien,Horror,3,1NS,2,2,1,2,{Range} 1,"Sacrifice this, send one Unit in {Range 2} to the Scrapyard",
+Tyler,Angry Bugs,Unit,,Alien,Bugs,3,2N,2,3,1,3,,,
+Tyler,Hunting Nightmares,Unit,,Alien,Bugs,3,2S,3,2,1,3,{Range} 1,On Deploy: Location takes 1 {Damage},
+Tyler,Blood Hungry Masses,Unit,,Alien,Bugs,3,LNN,3,2,0,3,{Kill} 1,"On Deploy: Target 1 Unit in {Range 1}, target takes 2 {Damage}",
+Colin,Horrors of Blood,Unit,,Alien,Horror,4,2NN,3,2,1,3,{Drain} 1,,
+Tyler,Glorp,Unit,TRUE,Alien,Ooze,4,LLNN,2,2,1,3,{Range} 2,"On Deploy: Target 1 Unit in {Range 2}, destroy target",
+Colin,Phrentix the Frozen Wind,Unit,TRUE,Alien,Elemental,5,2SSS,3,1,3,3,{Deploy} HQ,"• Exhaust this, this gains an exhaustion counter, exhaust all units in {Range 1}
+• Sacrifice a Unit in {Range 0} and remove a counter from this
+• This does not {Recover} while it has an exhaustion counter",
+Colin,Barge of the Dead,Unit,TRUE,Alien,Leviathan,5,LLNSS,1,0,0,10,{Ride} 5,"• Units cannot {Ride} this
+• You may Play Units from Scrapyards to this as {Riders}
+• This gets 1 {ATK} per Unit {Riding}
+• {Riders} get ""This may not {Act}""",
+Colin,Skreem,Unit,TRUE,Alien,Leviathan,5,LNSSS,2,3,0,8,,"• Once per turn, Target Unit in {Range 1}, destroy target* and this gains 1 {DEF} counter
+* If target is an Enemy, exhaust this",
+Rin,Horror of the Deep,Unit,,Alien,Deep,6,2NNLS,3,2,1,2,"{Range} 1
+{Kill} 2",,
+Colin,Skrull the Flame Walker,Unit,TRUE,Alien,Elemental,6,3SSS,1,4,1,3,{Deploy} HQ,"Exhaust this, Enemy Deployments in {Range 0} take 1 {Damage}, place this on any Location",
+Tyler,Brood Spawner,Location,,Alien,Home,1,1,,,1,1,{Deploy} 1,,
+Tyler,Quickly Dug Grotto,Location,,Alien,Cave,1,L,,,2,2,,,
+Tyler,Natural Cave,Location,,Alien,Cave,2,1N,,,2,1,{Deploy} 1,Once per turn: Sacrifice 1 Unit in {Range 1} Deploy 1 Unit from your Hand a CRC 2 + CRC of Sacrificed Card,
+Tyler,The Last Hole,Location,,Alien,Consume,2,1N,,,2,3,,,
+Colin,Breeding Ground,Location,,Alien,Home,2,LN,,,1,2,,"Send a card from your hand to the Scrapyard or pay {2}, deploy a Brood Token ""(2|1|0|1)"" from this",
+Tyler,Quarters,Location,,Alien,Quarters,2,LS,,,1,3,,"Once per turn, as a surprise, return one allied card to hand, add it's cost to your Resources",
+Colin,The Rift Opens,Location,,Alien,Interdimensional,2,NS,,,,,{Deploy} 4,"• You may Deploy this as a Surprise
+• You may Deploy from this as a Surprise
+• On {End}: Destroy this",
+Colin,Symbiotic Structure,Location,,Alien,Living,3,1NS,,,2,2,,"As a surprise, {S}{S}, target Unit in {Range 0}, target gets 1{ATK} or 1{DEF} until end of turn",
+Tyler,Eat the Planet,Location,,Alien,Consume,3,1NS,,,2,2,{Deploy} 2,On Deploy from this location: do 1 {Damage} to all Units in {Range 0},
+Tyler,Approaching,Location,,Alien,Horror,3,LNS,,,0,10,,This loses 2 {HP} each {Initialize},
+Colin,Consume,Event,,Alien,Harvest,2,LN,,,,,,"Target 2 Units in {Range 2} of an Allied Unit, destroy targets",
+Colin,Invasion Force,Event,,Alien,Invasion,5,LNSSS,,,,,,Deploy from your hand ignoring {U} costs until {End},
+Colin,Blow it Up,Event,,Alien,Bomb,9,3MMLLSS,,,,,,"Target HQ, target takes half its current {HP} in {Damage}",
+Colin,Survival,Surprise,,Alien,Evolution,2,QNL,,,,,,"Target an Allied Unit with CRC ?, replace target with CRC≤? from your deck",
+Colin,A Horrifying Discovery,Surprise,,Alien,Summon,4,1NNS,,,,,,"• On your HQ takes {Damage}: you may play this for cost {S}
+• Deploy one Leviathan Unit from your Deck, if you played this for cost {S}, unit gains ""{Deploy} HQ""",
+Colin,Eat Them All,Surprise,,Alien,Horror,4,2LN,,,,,,"Target 3 Units your opponent controls, that opponent chooses one and keeps it, you choose one and take control of it, the remaining one returns to their hand",
+Tyler,That Was My Best Friend,Surprise,,Alien,Return,6,2LNSS,,,,,{Deploy} 2,On Unit leave: Play that Unit for 0 cost,
+Colin,Evacuate and Regroup,Secret,,Alien,Evacuation,2,MS,,,,,{Deploy} 5,"On Unit {Enter} or {Move}: Look at your opponent's hand, choose one card and send it to the Scrapyard",
+Tyler,The Fear is Coming for You,Secret,,Alien,Death,3,1NS,,,,,,"On Unit attack in {Range 0}: Target each Enemy Unit in {Range 0}, destroy target, for each destroyed target deploy 1 Brood Token ""(2|1|0|1)""",
+Tyler,The Hole,Location,,Alien,Horror,5,LNSSS,,,2,3,,"Target 1 Enemy Unit in {Range 0}, destroy target",
+Tyler,Gunner,Unit,,Human,Soldier,1,1,1,1,1,2,{Range} 1,This Unit may attack while {Riding},
+Tyler,Scout,Unit,,Human,Soldier,1,M,4,0,0,1,,"• During {Combat}: this Unit gets {Invulnerable}
+• Once per Turn, Target a Location in {Range 0}, negate its effects until {End}",
+Tyler,Recon Force,Unit,,Human,Soldier,2,2,3,1,2,2,{Retreat} 1,,
+Tyler,Rocketeer,Unit,,Human,Soldier,2,1M,1,3,1,2,{Range} 2,,
+Tyler,Heroic Soldier,Unit,,Human,Soldier,2,LN,2,1,0,1,,On Damage: You may pay {Q} to make this unit take ? excess Damage,
+Tyler,Engineer,Unit,,Human,Soldier,3,3,1,1,1,2,,Allied Units in {Range 0} get 1 {ATK},
+Tyler,Combat Medic,Unit,,Human,Soldier,3,1LN,3,0,2,2,,"Exhaust this, target Allied Soldier in {Range 0}, target {Heals} 3",
+Tyler,Doctor on the Scene,Unit,,Human,Medic,3,1ML,2,1,1,3,{Deploy} 2,"• On Deploy: {Heal} 3 all Units in {Range 1}
+• Exhaust Unit in {Range 0}, {Heal} 3",
+Tyler,Drone Swarm,Unit,,Human,Drone,3,1MM,2,2,0,5,"{Air} 1
+{Range} 1",,
+Colin,COW Team 5,Unit,,Human,Soldier,3,2M,2,2,1,2,"{Range} 1
+{Retreat} 2
+{Deploy} 2",,
+Dayne,Air Bus,Unit,,Human,Plane,3,MCL,1,0,1,3,{Air} 2,"{2}, treating and using this as a Location deploy 1 Paratrooper Token ""(1|1|1|1) {Deploy} 1""",
+Tyler,Sniper,Unit,,Human,Soldier,3,MLL,1,2,0,1,{Range} 5,"On Enemy Unit {Enter} in {Range 1}: {2}, {Move} this 1 tile",
+Tyler,M191 Chaingun LUV,Unit,,Human,Vehicle,3,MMC,3,3,2,2,"{Range} 1
+{Ride} Soldier 2","• On Deploy: you may pay {L} to Deploy 1 Soldier Unit Token ""(1|1|0|1)"" to the same tile
+• This cannot {Move} unless you have at least 1 {Rider}
+• This cannot Attack unless you have 2 {Riders}",
+Colin,AT2A2 Auto Turret,Unit,,Human,Turret,4,MMCC,0,3,2,3,{Range} 1,• On Unit {Enter} {Range 1}: it takes 1 {Damage},
+Colin,Deployment Helicopter,Unit,,Human,Vehicle,4,MMCL,2,0,3,3,"{Air} 1
+{Ride} Soldier 4","On {Ride}: you may have {Rider} get -1 {ATK} and ""This Unit may attack while {Riding}""",
+Tyler,T3B1 Armored Tank,Unit,,Human,Vehicle,5,2MMM,1,1,4,1,"{Range} 2
+{Ride} Soldier 4","• This may not {Act} without {Riders}
+• This gets 1 {ATK} per Unit {Riding}
+• {Riders} get ""This Unit cannot be destroyed""",
+Colin,HMX1 Mech,Unit,TRUE,Human,Mech,7,3MMLL,2,4,3,5,{Ride} Human Soldier 1,This may not {Act} without a {Rider},
+Colin,Deployment Beacon,Location,,Human,Beacon,2,1C,,,0,3,{Deploy} 2,"On Deploy from this location: Deployment gets ""{Deploy} 1""",
+Colin,Radar Scrambler,Location,,Human,Beacon,2,MC,,,1,3,,"Deployments in {Range 1} get ""Cannot be targeted by Events, Surprises or Units not in {Range 1}""",
+Tyler,Medical Tent,Location,,Human,Fortress,3,1LN,,,2,2,,Exhaust target Allied Unit: target {Heals} 3,
+Colin,Bunker,Location,,Human,Fortress,4,2MM,,,3,3,,Allied Units in {Range 0} get 2 {DEF},
+Colin,An End to Violence Concert,Location,TRUE,Human,Amphitheater,4,LLNS,,,0,3,{Deploy} 1,"• You may Deploy this as a Surprise
+• On Deploy: Enemy Units in {Range 1} are placed on this Location
+• Enemy Units in {Range 0} cannot {Act}",
+Colin,Nuclear Bomb,Location,,Human,Nuke,5,MMCCL,,,0,∞,{Deploy} 3,"• When this is Deployed: Deployments in {Range 0} are destroyed and add 1 radiation counter to Units in {Range 1}
+• When Unit in {Range 1} {Acts} or ends {Initialize} here: Unit gains 1 radiation counter
+• Units with ? radiation counters get -? {DEF} and -?÷2 max {HP}",
+Colin,Abandoned Base,Event,,Human,Conscription,1,L,,,,,,"Target one Location, if no Enemy Units occupy target, control of target transfers to you",
+Colin,Supply Drop,Event,,Human,Resupply,2,1M,,,,,,"Target tile, put 1 {ATK} counter on Allied Units in {Range 0}",
+Colin,Call in Support,Event,,Human,Resupply,2,MC,,,,,,{Seek} one Human Soldier,
+Tyler,Cleansing,Event,,Human,Medicine,3,1LN,,,,,,Remove counters from Unit,
+Colin,Bombs Away,Event,,Human,Missile-Strike,3,1MM,,,,,,"Target Enemy Unit in {Range 1} of an Allied Unit, destroy target",
+Rin,Bureaucratic Bamboozle,Event,,Human,Paperwork,3,LLL,,,,,,"• Target up to 3 Enemy Units, targets may not {Act} while this is active
+• Destroy this next Controller {End}",
+Colin,Rods from Gods,Event,,Human,Mysticism,4,MLSS,,,,,,"Target tile, all Enemy Units in {Range 1} takes 3 {Damage}",
+Colin,Salt the Earth,Surprise,,Human,Bomb,3,1MC,,,,,,Target Allied Location: destroy target and all units in {Range 0},
+Colin,Loose the Hoard,Surprise,,Human,Drone,3,MCL,,,,,,"Target Unit , target takes 3 {Damage}",
+Colin,E.L.E.,Surprise,,Human,Asteroid,5,SSSSS,,,,,,"Choose one tile and one more per opponent, each opponent chooses 1 tile, target 1 chosen tile at random, remove tiles in {Range 1}",
+Colin,"Diver, Beware",Secret,,Human,Minefield,1,M,,,,,,Enemy Units in {Range 0} take 3 {Damage},
+Tyler,Bulwark,Secret,,Human,Structure,2,1M,,,,,,Allied Units in {Range 0} get 2 {DEF},
+Tyler,Killer Chemicals,Secret,,Human,Chemicals,2,1M,,,,,,"Target Allied Units in {Range 0}, targets get 10 {DEF}, destroy those Units during {End}",
+Colin,Emergency Supplies,Secret,,Human,Resupply,3,MMC,,,,,{Deploy} 1,Allied Units in {Range 0} get 2 {ATK},
+Tyler,A Small Step Forward,Secret,,Human,Experiement,4,2ML,,,,,,Destroy all Units in {Range 1},
+Colin,Left in Our Wake,Secret,,Human,Disappearance,5,MMCCL,,,,,,Deployments in {Range 1} are destroyed,
+Tyler,Hunter,Unit,,,Hirelings,2,2,1,1,1,2,{Range} 1,"Once per turn, on Enemy Unit retreat in {Range 0}: retreating Unit takes 1 {Damage}",
+Rin,Unicorn,Unit,,,Fantasy,2,NS,3,1,1,1,,"On leave: create 1 Soldier Token ""(1|1|0|1)"" on this tile",
+Colin,Mercenaries,Unit,,,Hirelings,3,1CC,2,2,2,3,{Retreat} 2,"On retreat: target Unit in {Range 0}, target takes 1 {Damage}",
+Colin,Ruby Golem,Unit,,,Fantasy,3,2S,2,1,0,3,,"Flip a Coin each {End}, heads, add 1 {ATK} counter to this",
+Rin,Mounted Unicorn,Unit,,,Fantasy,4,2NS,3,3,2,2,{Ride} 1,"• You may Sacrifice one Human Unit, reduce cost by {2}
+• You may Sacrifice one Fantasy Unit, reduce cost by {N}{S}
+• Units {Riding} get ""This Unit may attack while {Riding}""",
+Colin,The Killing Fields,Location,,,Battlefield,2,SS,,,2,5,,"• Allied Units in {Range 1} get 2 {ATK}
+• Sacrifice 2 Units in {Range 0}, target 1 Unit in {Range 1}, destroy target
+• This loses 1 {HP} each Controller {End}",
+Rin,What Could Be,Location,,,Fantasy,3,1NS,,,1,2,,"On Deploy, {Seek} one Fantasy Card, discard one card",
+Colin,To the Moon,Event,,,Stonks,1,C,,,,,,"• On {Initialize}: Flip a coin
+• On coin flip: heads, gain 1 success counter — tails, remove 1 success counter
+• As a surprise, remove 3 success counters and sacrifice this, add 5 {C} to your resources",
+Rin,Prayers Answered,Event,,,Fantasy,1,S,,,,,,On your next Play: ignore {U} cost,
+Rin,Reasonable Sacrifice,Event,,,Fantasy,2,1S,,,,,,"Sacrifice one Unit, {Seek} one Fantasy Card",
+Colin,Recycling,Event,,,Recycling,2,LL,,,,,,Return a Card from your Scrapyard to your hand,
+Rin,Unreasonable Request,Event,,,Fantasy,2,NS,,,,,,"Target 1 non-Fantasy Unit, destroy Target",
+Tyler,Pump,Event,,,Stonks,2,QC,,,,,,"• Choose a resource type, place ? counters on this, Opponent's Cards Played without chosen type in cost are negated, give each opponent Dump Token ""{Q}{Q}{Q}, Remove ? Counters from Pump, destroy pump""
+• On Opponent {Draw}: that Opponent gets resources equal to counters on this
+• On leave: increase chosen maximum resource equal to counters on this",
+Colin,The Grass is Greener,Event,,,Conscription,2,QNL,,,,,,Take Control of an Enemy Unit with CRC ?,
+Rin,Begging Forgiveness,Event,,,Fantasy,3,2S,,,,,,"Target 1 Allied Unit, target 2 Enemy Units, destroy all targets",
+Tyler,Resupply,Event,,,Resupply,3,MMC,,,,,,{Seek} one Card that shares an Archetype and Type with a Card you currently control,
+Colin,Redeploy,Event,,,Redeploy,3,QMCL,,,,,,Play one Card from your Scrapyard with CRC ?,
+Rin,A Very Legitimate Business,Event,,,Scam,4,2LN,,,,,,"• Your opponent may not play cards in response to this
+• Remove 2 resources from your opponent, gain one resource maximum",
+Colin,Fuse,Event,,,Fusion,4,3N,,,,,,"Target 1 Allied Unit, choose one of its attributes, make that number of chosen counters, destroy target, Target 1 Allied Unit in {Range 1}, apply those counters to target",
+Colin,Sacrifices Must Be Made,Event,,,Ritual,5,LNNSS,,,,,,"Sacrifice 3 Units, Deploy 1 Unit from your Deck ignoring its cost.",
+Tyler,Cannon Fodder,Surprise,,,Soldier,1,1,,,,,,"Deploy 3 Soldier Tokens ""(1|1|0|1)""",
+Colin,Tractor Beam,Surprise,,,Beam,1,S,,,,,,On Unit {Move}: Unit may not {Act} this turn,
+Tyler,It's All Rigged,Surprise,,,Gambling,2,2,,,,,,On coin flip: choose an outcome,
+Rin,Religious Practice,Surprise,,,Fantasy,2,1S,,,,,,"{Seek} 1 Fantasy Card from your Deck, play that card immediately or discard it",
+Colin,Defectors Will Be Shot,Surprise,,,Reinforcements,2,2L,,,,,,"Target Unit in {Range 2}, {Move} target to defending Unit's tile, target is defending",
+Tyler,The Assembly Dissents,Surprise,,,Paperwork,2,LL,,,,,,"Target Card, negate target",
+Rin,Moment of Peace,Surprise,,,Fantasy,3,2S,,,,,,Negate Anything,
+Colin,Shrink Ray,Surprise,,,Ray Gun,4,2MM,,,,,,"Target tile, choose {ATK} or {DEF} counters, all Units on target gain -1 counters of chosen type until stat is 0",
+Colin,Parallel Dimension,Surprise,,,Rift,4,2SS,,,,,,"Create a Token Copy of a Unit with ""Remove this from play during Controller {Initialize}""",
+Tyler,Beyond The Veil,Surprise,,,Occultism,4,SSSS,,,,,,"Deploy 1 Eldritch Horror Token ""(3|4|0|10) • Flip a coin each {End}: tails, destroy this • Control of this unit transfers to Turn Player each {Initialize}""",
+Colin,Cease and Desist,Secret,,,Paperwork,1,L,,,,,,On Unit {Act} in {Range 0}: negate that action,
+Colin,Goodbye,Secret,,,Bomb,3,1ML,,,,,{Deploy} 2,All Deployments in {Range 0} take 2 {Damage},
+Tyler,Dump,Token,,,Surprise,,,,,,,,"{Q}{Q}{Q}, Remove ? Counters from Pump, destroy pump",
+Tyler,Eldritch Horror,Token,,,Unit,,,3,4,0,10,,"• On each {End}: flip a coin, tails, destroy this
+• Control of this unit transfers to Turn Player each {Initialize}",
+Tyler,Soldier,Token,,,Unit,,,1,1,0,1,,,
+Tyler,Paratrooper,Token,,,Unit,,,1,1,1,1,{Deploy} 1,,
+Tyler,Brood,Token,,,Unit,,,2,1,0,1,,,
+Colin,City in a Bubble,HQ,,,HQ,,,,,0,20,,On Damage: each damager recieves {Damage} equal to the damage it caused,
+Tyler,Earth,HQ,,,HQ,,,,,5,5,,"• This can be your HQ if all cards in your Deck are Human
+• On takes {Damage}: ignore that damage, this takes 1 {Damage}
+• Once per turn, {1}{M}, You may deploy a Soldier Token ""(1|1|0|1)"" from this",
+Tyler,Skz'kat'ua,HQ,,,HQ,,,,,0,40,{Ride} ∞,"• This can be your HQ if all cards in your Deck are Alien
+• Once per turn, you may place this in {Range Q} of it's current tile, ? is the number of {Riders} up to a max of 3
+• Once per turn, Sacrifice ? {HP}, ? is the number of brood counters on this, add one brood counter on this, deploy a Brood Token ""(2|1|0|1)"" from this",
+Tyler,Somewhere,HQ,,,HQ,,,,,2,20,,This cannot take more than 10 {Damage},
+Tyler,The Headquarters,HQ,,,HQ,,,,,5,10,,,
