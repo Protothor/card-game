@@ -1,7 +1,7 @@
 {
   "name": "deck-builder",
   "version": "0.1.0",
-  "homepage": "https://protothor.github.io/deckbuilder",
+  "homepage": "https://protothor.github.io/deck-builder",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
