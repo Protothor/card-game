@@ -12,8 +12,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "clean": "node ./node_modules/gh-pages/bin/gh-pages-clean",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "node ./deploy.js",
     "start": "set PORT=30000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
