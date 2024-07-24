@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/deck-builder/static/css/main.81ead723.css",
-    "main.js": "/deck-builder/static/js/main.b75d8add.js",
+    "main.js": "/deck-builder/static/js/main.6c9bbf04.js",
     "static/js/453.a809915d.chunk.js": "/deck-builder/static/js/453.a809915d.chunk.js",
     "static/media/Default copy_098.png": "/deck-builder/static/media/Default copy_098.97659d852e5a0c6b0fab.png",
     "static/media/Default copy_001.png": "/deck-builder/static/media/Default copy_001.491dcd277646cb9cb197.png",
@@ -129,11 +129,11 @@
     "static/media/Card List.csv": "/deck-builder/static/media/Card List.5dcb4d8965fdf23118fa.csv",
     "index.html": "/deck-builder/index.html",
     "main.81ead723.css.map": "/deck-builder/static/css/main.81ead723.css.map",
-    "main.b75d8add.js.map": "/deck-builder/static/js/main.b75d8add.js.map",
+    "main.6c9bbf04.js.map": "/deck-builder/static/js/main.6c9bbf04.js.map",
     "453.a809915d.chunk.js.map": "/deck-builder/static/js/453.a809915d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.81ead723.css",
-    "static/js/main.b75d8add.js"
+    "static/js/main.6c9bbf04.js"
   ]
 }
