@@ -103,12 +103,12 @@ function App() {
           if (key === "ArrowLeft") {
             const cardIndex = useDeck.toReversed().findIndex(card => card.id === selectedCard.id)
             if (cardIndex === -1) {
-              const card = useDeck.toReversed().find(card => card.id < selectedCard.id)
+              const card = useDeck.toReversed().find(card => card.id > selectedCard.id)
               if (card) {
                 setSelectedCard({...allCards[card.id]})
               }
             } else if (cardIndex !== 0) {
-              setSelectedCard({...allCards[useDeck.toReversed()[cardIndex - 1].id]})
+              setSelectedCard({...allCards[useDeck.toReversed()[cardIndex + 1].id]})
             }
           } else if (key === "ArrowRight") {
             const cardIndex = useDeck.findIndex(card => card.id === selectedCard.id)
